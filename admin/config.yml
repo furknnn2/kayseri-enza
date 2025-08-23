@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "yonetim/upload/Galeri"
+public_folder: "/yonetim/upload/Galeri"
+
+collections:
+  - name: "sayfalar"
+    label: "Sayfalar"
+    files:
+      - file: "hakkimizda.html"
+        label: "Hakkımızda Sayfası"
+        name: "hakkimizda"
+        fields:
+          - {label: "Sayfa Başlığı", name: "title", widget: "string"}
+          - {label: "Sayfa İçeriği", name: "body", widget: "markdown"}
