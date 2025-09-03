@@ -1,8 +1,0 @@
-# Admin paneline gelen isteklerin doğru çalışması için kural
-/admin/* /admin/index.html 200
-
-# Netlify'ın kimlik doğrulama (şifre belirleme vb.) linklerinin çalışmasını sağla
-/.netlify/identity/* /index.html 200
-
-# Yukarıdaki kurallara uymayan diğer tüm bozuk linkleri, SEO için ana sayfaya yönlendir
-/* /index.html 301
