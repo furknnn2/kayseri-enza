@@ -9302,22 +9302,19 @@ p.g-calender a:hover {
     background: none !important;
 }
 @media (max-width: 768px) {
+  .glo-banner-area .swiper-slide {
+    width: 100% !important;
+  }
+
   .glo-banner-slider {
     min-height: 60vh !important;
   }
 
   .glo-banner-img img {
-    display: none !important;
-  }
-
-  .glo-banner-img {
-    display: block !important;
     width: 100% !important;
     height: 100% !important;
-    background-image: url('/yonetim/upload/Anasayfa/anysayfa2.jpg.jpg') !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
+    object-fit: cover !important;
+    object-position: center center !important;
   }
 
   .glo-banner-content h1 {
