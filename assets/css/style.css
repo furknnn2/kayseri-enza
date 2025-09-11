@@ -9316,9 +9316,6 @@ p.g-calender a:hover {
     width: 100% !important;
     height: auto !important;
     position: static !important;
-  }
-
-  .glo-banner-content {
-    display: none !important;
+    object-fit: initial !important;
   }
 }
