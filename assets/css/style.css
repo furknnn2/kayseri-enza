@@ -9302,7 +9302,20 @@ p.g-calender a:hover {
     background: none !important;
 }
 @media (max-width: 768px) {
-  .glo-banner-area {
-    display: none !important;
+  .glo-banner-area .swiper-slide {
+    width: 100% !important;
+  }
+  .glo-banner-slider {
+    min-height: 55vh !important;
+  }
+  .glo-banner-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: left center !important;
+  }
+  .glo-banner-content h1 {
+    font-size: 28px !important;
+    margin-bottom: 20px !important;
   }
 }
