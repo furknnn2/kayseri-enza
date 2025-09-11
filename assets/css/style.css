@@ -9307,18 +9307,21 @@ p.g-calender a:hover {
   }
 
   .glo-banner-img img {
+    display: none !important;
+  }
+
+  .glo-banner-img {
+    display: block !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
+    background-image: url('/yonetim/upload/Anasayfa/anysayfa2.jpg.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 
   .glo-banner-content h1 {
     font-size: 28px !important;
     margin-bottom: 20px !important;
-  }
-
-  .glo-banner-content {
-      padding: 0 15px !important;
   }
 }
