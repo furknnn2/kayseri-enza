@@ -9303,22 +9303,22 @@ p.g-calender a:hover {
 }
 @media (max-width: 768px) {
   .glo-banner-slider {
-    min-height: 60vh;
+    min-height: 60vh !important;
   }
 
   .glo-banner-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
   }
 
   .glo-banner-content h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 28px !important;
+    margin-bottom: 20px !important;
   }
 
   .glo-banner-content {
-      padding: 0 15px;
+      padding: 0 15px !important;
   }
 }
