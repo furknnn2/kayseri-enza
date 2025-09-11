@@ -9305,20 +9305,20 @@ p.g-calender a:hover {
   .glo-banner-area .swiper-slide {
     width: 100% !important;
   }
-  .glo-banner-slider {
-    min-height: 40vh !important;
+
+  .glo-banner-slider,
+  .glo-banner-img {
+    height: auto !important;
+    min-height: auto !important;
   }
-  .glo-banner-img,
+
   .glo-banner-img img {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: left center !important;
+    height: auto !important;
+    position: static !important;
   }
+
   .glo-banner-content {
-    padding: 0 15px !important;
-  }
-  .glo-banner-content h1 {
-    font-size: 24px !important;
+    display: none !important;
   }
 }
