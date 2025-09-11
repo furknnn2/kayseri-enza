@@ -9297,4 +9297,7 @@ p.g-calender a:hover {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+
+.glo-banner-img::before {
+    background: none !important;
+}
