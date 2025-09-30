@@ -2,18 +2,29 @@ backend:
   name: git-gateway
   branch: main
 
-publish_mode: editorial_workflow
-
-media_folder: "yonetim/upload/Galeri"
-public_folder: "/yonetim/upload/Galeri"
+media_folder: "yonetim/upload"
+public_folder: "/yonetim/upload"
 
 collections:
-  - name: "sayfalar"
-    label: "Sayfalar"
+ 
+  - name: "pages"
+    label: "Sabit Sayfalar"
     files:
-      - file: "hakkimizda.html"
-        label: "Hakkımızda Sayfası"
-        name: "hakkimizda"
-        fields:
-          - {label: "Sayfa Başlığı", name: "title", widget: "string"}
-          - {label: "Sayfa İçeriği", name: "body", widget: "markdown"}
+      - {file: "index.html", label: "Anasayfa", name: "index", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+      - {file: "hakkimizda.html", label: "Hakkımızda", name: "hakkimizda", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+      - {file: "hizmetlerimiz.html", label: "Hizmetlerimiz", name: "hizmetlerimiz", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+      - {file: "bloglar.html", label: "Blog Listeleme Sayfası", name: "bloglar", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+      - {file: "iletisim.html", label: "İletişim", name: "iletisim", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+  
+ 
+  - name: "blog"
+    label: "Blog Yazıları"
+    label_singular: "Yeni Yazı"
+    folder: "blog/"  # Yeni blog yazılarının kaydedileceği klasör
+    create: true     # Panelden yeni yazı eklemeye izin ver
+    slug: "{{slug}}" # Dosya adını yazı başlığından otomatik oluştur
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
+      - {label: "Öne Çıkan Görsel", name: "thumbnail", widget: "image"}
+      - {label: "Yazı İçeriği", name: "body", widget: "markdown"}
