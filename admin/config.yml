@@ -6,26 +6,52 @@ media_folder: "yonetim/upload"
 public_folder: "/yonetim/upload"
 
 collections:
- 
   - name: "pages"
     label: "Sabit Sayfalar"
     files:
-      - {file: "index.html", label: "Anasayfa", name: "index", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
-      - {file: "hakkimizda.html", label: "Hakkımızda", name: "hakkimizda", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
-      - {file: "hizmetlerimiz.html", label: "Hizmetlerimiz", name: "hizmetlerimiz", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
-      - {file: "bloglar.html", label: "Blog Listeleme Sayfası", name: "bloglar", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
-      - {file: "iletisim.html", label: "İletişim", name: "iletisim", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+      - file: "index.html"
+        label: "Anasayfa"
+        name: "index"
+        fields:
+          - {label: "SEO Başlığı (Title)", name: "title", widget: "string"}
+          - {label: "SEO Açıklaması (Description)", name: "description", widget: "text"}
+          - {label: "Ana İçerik", name: "body", widget: "markdown"}
+      - file: "hakkimizda.html"
+        label: "Hakkımızda"
+        name: "hakkimizda"
+        fields:
+          - {label: "SEO Başlığı (Title)", name: "title", widget: "string"}
+          - {label: "SEO Açıklaması (Description)", name: "description", widget: "text"}
+          - {label: "Ana İçerik", name: "body", widget: "markdown"}
+      - file: "hizmetlerimiz.html"
+        label: "Hizmetlerimiz"
+        name: "hizmetlerimiz"
+        fields:
+          - {label: "SEO Başlığı (Title)", name: "title", widget: "string"}
+          - {label: "SEO Açıklaması (Description)", name: "description", widget: "text"}
+          - {label: "Ana İçerik", name: "body", widget: "markdown"}
+      - file: "bloglar.html"
+        label: "Blog Listeleme Sayfası"
+        name: "bloglar"
+        fields:
+          - {label: "SEO Başlığı (Title)", name: "title", widget: "string"}
+          - {label: "SEO Açıklaması (Description)", name: "description", widget: "text"}
+      - file: "iletisim.html"
+        label: "İletişim"
+        name: "iletisim"
+        fields:
+          - {label: "SEO Başlığı (Title)", name: "title", widget: "string"}
+          - {label: "SEO Açıklaması (Description)", name: "description", widget: "text"}
+          - {label: "Ana İçerik", name: "body", widget: "markdown"}
   
- 
   - name: "blog"
     label: "Blog Yazıları"
     label_singular: "Yeni Yazı"
-    folder: "blog/"  
-    create: true     
-    slug: "{{slug}}" 
+    folder: "blog/"
+    create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Başlık", name: "title", widget: "string"}
       - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
       - {label: "Öne Çıkan Görsel", name: "thumbnail", widget: "image"}
       - {label: "Yazı İçeriği", name: "body", widget: "markdown"}
-
