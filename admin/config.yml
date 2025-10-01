@@ -6,56 +6,35 @@ media_folder: "yonetim/upload"
 public_folder: "/yonetim/upload"
 
 collections:
-  - name: "ayarlar"
-    label: "Genel Site Ayarları"
-    files:
-      - label: "İletişim, Sosyal Medya ve Logo"
-        name: "genel_ayarlar"
-        file: "_data/ayarlar.yml"
-        fields:
-          - {label: "Site Logosu", name: "logo", widget: "image"}
-          - {label: "Telefon Numarası", name: "telefon", widget: "string"}
-          - {label: "E-posta Adresi", name: "eposta", widget: "string"}
-          - {label: "Çalışma Saatleri", name: "saatler", widget: "string"}
-          - {label: "Adres", name: "adres", widget: "string"}
-          - {label: "Instagram Linki", name: "instagram_url", widget: "string"}
-          - {label: "Facebook Linki", name: "facebook_url", widget: "string"}
-
   - name: "sayfalar"
-    label: "Sabit Sayfalar (Hakkımızda, İletişim vb.)"
+    label: "Sayfalar"
     files:
       - label: "Anasayfa"
         name: "index"
         file: "index.html"
         fields:
-          - {label: "SEO Başlığı (Title)", name: "title", widget: "string"}
-          - {label: "SEO Açıklaması (Description)", name: "description", widget: "text"}
           - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+
       - label: "Hakkımızda Sayfası"
         name: "hakkimizda"
         file: "hakkimizda.html"
         fields:
-          - {label: "SEO Başlığı (Title)", name: "title", widget: "string"}
-          - {label: "SEO Açıklaması (Description)", name: "description", widget: "text"}
           - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
 
-  - name: "blog"
-    label: "Blog Yazıları"
-    folder: "_posts/blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Başlık", name: "title", widget: "string"}
-      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
-      - {label: "Öne Çıkan Görsel", name: "thumbnail", widget: "image"}
-      - {label: "Yazı İçeriği", name: "body", widget: "markdown"}
+      - label: "Hizmetlerimiz Sayfası"
+        name: "hizmetlerimiz"
+        file: "hizmetlerimiz.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
 
-  - name: "hizmetler"
-    label: "Hizmetler"
-    folder: "_posts/hizmetler"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Hizmet Adı", name: "title", widget: "string"}
-      - {label: "Liste Görseli", name: "thumbnail", widget: "image"}
-      - {label: "Detay Sayfası İçeriği", name: "body", widget: "markdown"}
+      - label: "Bloglar Sayfası"
+        name: "bloglar"
+        file: "bloglar.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+
+      - label: "İletişim Sayfası"
+        name: "iletisim"
+        file: "iletisim.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
