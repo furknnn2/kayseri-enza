@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "/yonetim/upload"
+media_folder: "yonetim/upload"
 public_folder: "/yonetim/upload"
 
 collections:
@@ -92,4 +92,3 @@ collections:
         file: "detay/bolgesel-incelme-nedir-nasil-yapilir/index.html"
         fields:
           - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
-
